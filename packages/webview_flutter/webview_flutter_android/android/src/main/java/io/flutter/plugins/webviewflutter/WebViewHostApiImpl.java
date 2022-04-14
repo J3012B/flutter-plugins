@@ -341,6 +341,9 @@ public class WebViewHostApiImpl implements WebViewHostApi {
             ? webViewProxy.createWebView(context)
             : webViewProxy.createInputAwareWebView(context, containerView);
 
+	webView.setFocusable(true);
+	webView.setFocusableInTouchMode(true);
+
     displayListenerProxy.onPostWebViewInitialization(displayManager);
     instanceManager.addInstance(webView, instanceId);
   }

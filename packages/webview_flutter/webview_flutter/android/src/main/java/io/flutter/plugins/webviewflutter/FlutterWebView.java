@@ -109,6 +109,8 @@ public class FlutterWebView implements PlatformView, MethodCallHandler {
             params,
             new FlutterWebChromeClient(),
             flutterDownloadListener);
+			webView.setFocusable(true);
+			webView.setFocusableInTouchMode(true);
     flutterDownloadListener.setWebView(webView);
 
     displayListenerProxy.onPostWebViewInitialization(displayManager);

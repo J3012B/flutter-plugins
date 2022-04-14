@@ -150,6 +150,8 @@ public class WebViewBuilder {
     webSettings.setSupportMultipleWindows(supportMultipleWindows);
     webView.setWebChromeClient(webChromeClient);
     webView.setDownloadListener(downloadListener);
+	webView.setFocusable(true);
+	webView.setFocusableInTouchMode(true);
     return webView;
   }
 }
