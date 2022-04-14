@@ -119,6 +119,8 @@ public class WebViewHostApiImpl implements WebViewHostApi {
      */
     public WebViewPlatformView(Context context) {
       super(context);
+	  setFocusable(true);
+      setFocusableInTouchMode(true);
     }
 
     @Override
